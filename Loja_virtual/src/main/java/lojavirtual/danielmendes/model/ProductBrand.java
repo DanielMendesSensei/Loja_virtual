@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Column;
 
 @Entity
 @Table(name = "product_brand")
@@ -19,7 +20,8 @@ public class ProductBrand implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_product_brand")
 	private Long id;
-
+	
+	@Column(nullable = false)
 	private String Name_Description;
 
 	public Long getId() {

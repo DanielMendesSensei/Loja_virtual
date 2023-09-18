@@ -1,0 +1,22 @@
+1 - ProductBrand - ok
+2 - Product_Category - ok
+3 - Roles
+4 - Person
+5 - Legal_Person
+6 - Physical_Person
+7 - Adress
+8 - User
+9 - User_Roles
+10 - Bils_To_Recive
+11 - Payment_Form
+12 - Bills_To_Pay
+13 - Discont_Code
+14 - Product_Register
+15 - Image_Product_Bank
+16 - Purchase_Invoice
+17 - Product_Item_Note
+18 - Tracking Status
+19 - Sales_Invoice
+20 - Sale_Purchase_VS
+21 - Sale_Item
+22 - Product_Review

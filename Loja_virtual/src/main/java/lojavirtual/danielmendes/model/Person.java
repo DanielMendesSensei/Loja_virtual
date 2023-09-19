@@ -1,14 +1,19 @@
 package lojavirtual.danielmendes.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance; //usamos para classes abstratas
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.OneToMany;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -28,6 +33,17 @@ public abstract class Person implements Serializable {
 	private String E_mail;
 
 	private String Phone;
+	
+	@OneToMany(mappedBy = "person", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<Adress> _adress = new ArrayList<Adress>();
+	
+	public void set_Adress(List<Adress> _adress) {
+		this._adress = _adress;
+	}
+	
+	public List<Adress> get_Adress() {
+		return _adress;
+	}
 
 	public Long getId() {
 		return id;

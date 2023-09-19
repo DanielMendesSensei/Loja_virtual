@@ -26,8 +26,8 @@ public class PhysicalPerson extends Person {
 		return CPF;
 	}
 
-	public void setCPF(String cPF) {
-		this.CPF = cPF;
+	public void setCPF(String CPF) {
+		this.CPF = CPF;
 	}
 
 	public Date getBirth_date() {

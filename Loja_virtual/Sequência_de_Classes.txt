@@ -2,8 +2,8 @@
 2 - Product_Category - ok
 3 - Roles - ok
 4 - Person - ok
-5 - Legal_Person
-6 - Physical_Person
+5 - Legal_Person - ok
+6 - Physical_Person - ok
 7 - Adress
 8 - User
 9 - User_Roles

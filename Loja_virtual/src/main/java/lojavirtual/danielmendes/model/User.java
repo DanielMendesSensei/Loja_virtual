@@ -49,11 +49,11 @@ public class User implements UserDetails{
 	//mapeamento das chaves em ROLES
 	@OneToMany(fetch = FetchType.LAZY) //só carrega quando precisar
 	@JoinTable(name = "user_roles", uniqueConstraints = @UniqueConstraint (columnNames = {"user_id", "role_id"} , 
-	 name = "unique_user_roles"),
-	joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id", table = "users",
-	unique = false, foreignKey = @ForeignKey(name = "user_fk", value = ConstraintMode.CONSTRAINT)), 
-	inverseJoinColumns = @JoinColumn(name = "role_id", unique = false, referencedColumnName = "id", table = "roles",
-	foreignKey = @ForeignKey(name = "role_fk", value = ConstraintMode.CONSTRAINT)))
+	 	name = "unique_user_roles"),
+		joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id", table = "users",
+		unique = false, foreignKey = @ForeignKey(name = "user_fk", value = ConstraintMode.CONSTRAINT)), 
+		inverseJoinColumns = @JoinColumn(name = "role_id", unique = false, referencedColumnName = "id", table = "roles",
+		foreignKey = @ForeignKey(name = "role_fk", value = ConstraintMode.CONSTRAINT)))
 	private List<Roles> roles;
 	
 	//Autoridades = São os acessos ROLE_ADMIN, ROLE_SECRETARIO, ROLE_FINANCEIRO

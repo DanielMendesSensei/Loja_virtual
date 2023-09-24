@@ -7,9 +7,20 @@
 7 - Adress - ok
 8 - User - ok
 9 - User_Roles - ok
-10 - Bils_To_Recive
-11 - Payment_Form
+
+Consertar a CONSTRAINT de ROLE ID - OK
+SELECT constraint_name FROM information_schema.constraint_column_usage
+WHERE table_name = 'user_roles' AND column_name = 'role_id'
+AND constraint_name <> 'unique_user_roles';
+
+ALTER TABLE user_roles DROP CONSTRAINT "uk_5q4rc4fh1on6567qk69uesvyf";
+
+10 - Bils_To_Recive - ok
+     ENUM STATUS - ok
+
+11 - Payment_Form - ok
 12 - Bills_To_Pay
+     ENUM STATUS - ok
 13 - Discont_Code
 14 - Product_Register
 15 - Image_Product_Bank

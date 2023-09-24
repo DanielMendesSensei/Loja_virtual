@@ -5,12 +5,17 @@ import java.util.Objects;
 
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import lojavirtual.danielmendes.enums.Adress_Type;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.ForeignKey;
 
@@ -42,6 +47,17 @@ public class Adress implements Serializable {
 	@ManyToOne(targetEntity = Person.class)
 	@JoinColumn(name = "person_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "person_fk"))
 	private Person person;
+	
+	@Enumerated(EnumType.STRING)
+	private Adress_Type AdressType;
+	
+	public void setAdress_Type(Adress_Type AdressType) {
+		this.AdressType = AdressType;
+	}
+	
+	public Adress_Type getAdress_type() {
+		return AdressType;
+	}
 
 	public Long getId() {
 		return id;

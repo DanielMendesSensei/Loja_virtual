@@ -4,9 +4,9 @@
 4 - Person - ok
 5 - Legal_Person - ok
 6 - Physical_Person - ok
-7 - Adress
-8 - User
-9 - User_Roles
+7 - Adress - ok
+8 - User - ok
+9 - User_Roles - ok
 10 - Bils_To_Recive
 11 - Payment_Form
 12 - Bills_To_Pay

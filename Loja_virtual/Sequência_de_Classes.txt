@@ -19,13 +19,15 @@ ALTER TABLE user_roles DROP CONSTRAINT "uk_5q4rc4fh1on6567qk69uesvyf";
      ENUM STATUS - ok
 
 11 - Payment_Form - ok
-12 - Bills_To_Pay
+12 - Bills_To_Pay - ok
      ENUM STATUS - ok
-13 - Discont_Code
-14 - Product_Register
-15 - Image_Product_Bank
-16 - Purchase_Invoice
-17 - Product_Item_Note
+
+13 - Discont_Code - ok
+14 - Product_Register - ok
+     Média de tamanho da imagem 500kb, se possível até menos 200kb
+15 - Image_Product_Bank - ok
+16 - Purchase_Invoice - ok
+17 - Product_Item_Note - ok
 18 - Tracking Status
 19 - Sales_Invoice
 20 - Sale_Purchase_VS

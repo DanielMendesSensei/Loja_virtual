@@ -6,6 +6,8 @@ public enum StatusBillsToPay {
 	OVERDUE("Overdue"),
 	OPEN("Open"),
 	RENEGOTIATED("Renegotiated"),
+	RENT("Rent"),
+	EMPLOYEE("Employee"),	
 	PAID("Paid");
 	
 	private String Description;

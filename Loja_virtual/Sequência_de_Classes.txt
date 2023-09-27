@@ -28,8 +28,8 @@ ALTER TABLE user_roles DROP CONSTRAINT "uk_5q4rc4fh1on6567qk69uesvyf";
 15 - Image_Product_Bank - ok
 16 - Purchase_Invoice - ok
 17 - Product_Item_Note - ok
-18 - Tracking Status
-19 - Sales_Invoice
-20 - Sale_Purchase_VS
-21 - Sale_Item
-22 - Product_Review
+18 - Tracking Status - ok
+19 - Sales_Invoice - ok
+20 - Sale_Purchase_VS - ok
+21 - Sale_Item - ok
+22 - Product_Review - ok

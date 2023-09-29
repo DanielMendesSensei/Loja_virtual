@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,12 +26,15 @@ public class Discont_Code implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_discont_code")
 	private Long id;
 	
+	@Column(nullable = false)
 	private String Description_Code;
+	
 	//para valores monetários, porcentagem.. BigDecimal
 	private BigDecimal Discont_Real_Value;
 	
 	private BigDecimal Percent_Value_Description;
 	
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date Due_Date;
 

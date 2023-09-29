@@ -3,6 +3,7 @@ package lojavirtual.danielmendes.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -30,24 +31,31 @@ public class Adress implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_adress")
 	private Long id;
 
+	@Column(nullable = false)
 	private String Zip_Code;
 
+	@Column(nullable = false)
 	private String Street;
 
+	@Column(nullable = false)
 	private String Street_Number;
 
 	private String Adjunt;
 
+	@Column(nullable = false)
 	private String District;
 
+	@Column(nullable = false)
 	private String State;
 
+	@Column(nullable = false)
 	private String City;
 	
 	@ManyToOne(targetEntity = Person.class)
 	@JoinColumn(name = "person_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "person_fk"))
 	private Person person;
 	
+	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private Adress_Type AdressType;
 	

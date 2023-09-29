@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
@@ -41,10 +42,12 @@ public class SalePurchaseVS implements Serializable {
 	@JoinColumn(name = "billing_adress_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "billing_adress_fk"))
 	private Adress Billing_Adress;
 
+	@Column(nullable = false)
 	private BigDecimal Amount;
 
 	private BigDecimal Value_Discount_Amount;
 
+	@Column(nullable = false)
 	private BigDecimal Shipping_Value;
 
 	@ManyToOne
@@ -56,14 +59,17 @@ public class SalePurchaseVS implements Serializable {
 	private SalesInvoice Sales_Invoice;
 
 	@ManyToOne
-	@JoinColumn(name = "discont_code_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "discont_code_fk"))
+	@JoinColumn(name = "discont_code_id", foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "discont_code_fk"))
 	private Discont_Code Discont_Code;
 
+	@Column(nullable = false)
 	private Integer Days_To_Delivery;
 
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date Date_Of_Sale;
 
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date Delivery_Date;
 

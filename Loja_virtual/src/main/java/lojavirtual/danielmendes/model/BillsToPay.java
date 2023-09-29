@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -33,17 +34,21 @@ public class BillsToPay implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_bills_to_pay")
 	private Long id;
 
+	@Column(nullable = false)
 	private String Description;
 
+	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private StatusBillsToPay status;
 
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date Due_date;
 
 	@Temporal(TemporalType.DATE)
 	private Date Payday;
 
+	@Column(nullable = false)
 	private BigDecimal Amount;
 
 	private BigDecimal Discount_Amount;

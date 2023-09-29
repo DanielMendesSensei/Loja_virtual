@@ -1,5 +1,6 @@
 package lojavirtual.danielmendes.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -12,14 +13,18 @@ public class LegalPerson extends Person{
 
 	private static final long serialVersionUID = 1L;
 	
+	@Column(nullable = false)
 	private String CNPJ;
 	
+	@Column(nullable = false)
 	private String Insc_Estadual;
 
 	private String Insc_Municipal;
 	
+	@Column(nullable = false)
 	private String Fantasy_Name;
 	
+	@Column(nullable = false)
 	private String Company_Name;
 	
 	private String Category;

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
@@ -28,18 +29,23 @@ public class Purchase_Invoice implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_purchase_invoice")
 	private Long id;
 
+	@Column(nullable = false)
 	private String Note_Number;
 
+	@Column(nullable = false)
 	private String Serial_Number;
 
 	private String Description_Obs;
 
+	@Column(nullable = false)
 	private BigDecimal Amout;
 
 	private BigDecimal Discont_Amount;
 
+	@Column(nullable = false)
 	private BigDecimal ICMS_Value;
 
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date Purchase_Date;
 

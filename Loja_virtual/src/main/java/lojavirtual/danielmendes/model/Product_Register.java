@@ -22,27 +22,36 @@ public class Product_Register implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_product_register")
 	private Long id;
 
+	@Column(nullable = false)
 	private String Name;
 	
+	@Column(nullable = false)
 	private Boolean Active = Boolean.TRUE;
 
+	@Column(nullable = false)
 	private String Type_Unity;
 
-	@Column(columnDefinition = "text", length = 2000)
+	@Column(columnDefinition = "text", length = 2000, nullable = false)
 	private String Description;
 
 	// Product_Item_note_id FK, adicionar depois
 
+	@Column(nullable = false)
 	private Double Weight;
 
+	@Column(nullable = false)
 	private Double Width;
 
+	@Column(nullable = false)
 	private Double Height;
 
+	@Column(nullable = false)
 	private Double Depth;
 
+	@Column(nullable = false)
 	private BigDecimal Sales_Value = BigDecimal.ZERO;
 
+	@Column(nullable = false)
 	private Integer Stock_QTD = 0;
 
 	private Integer Stock_Alert_QTD = 0;

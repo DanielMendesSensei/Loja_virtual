@@ -26,10 +26,10 @@ public class Image_Product_Bank implements Serializable{
 	private Long id;
 	
 	//isso pq as imagens vão passar pelo BASE64
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "text", nullable = false)
 	private String Original_Img;
 	
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "text", nullable = false)
 	private String Miniature_Img;
 	
 	@ManyToOne

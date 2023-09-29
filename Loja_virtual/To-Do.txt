@@ -1,0 +1,7 @@
+1 - Conferir o diagrama com as classes. - ok
+    Conferir associações e relacionamentos.
+2 - Definir campos obrigatórios nas tabelas e nas classes.- ok
+3 - verificar a chave estrangeira para a tabela pessoa que é genérica.
+    Pois não está criando a restrição para a chave estrangeira
+4 - Criar a parte de Autenticação com o Spring Security e JWT.
+5 - Recuperação de senha.
